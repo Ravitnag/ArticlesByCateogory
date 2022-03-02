@@ -36,10 +36,10 @@ const ChangeCategory = useCallback ((category) => dispatch(searchArticlesByCateg
 
     return (
         <div style={theme}>
-          <button onClick={(e)=>ChangeCategory("Fashion")}>Fashion</button>
-          <button onClick={(e)=>ChangeCategory("Business")}>Business</button>
-          <button onClick={(e)=>ChangeCategory("Health")}>Health</button>
-          <button onClick={(e)=>ChangeCategory("Entertainment")}>Entertainment</button>
+          <button onClick={(e)=>ChangeCategory("fashion")}>Fashion</button>
+          <button onClick={(e)=>ChangeCategory("business")}>Business</button>
+          <button onClick={(e)=>ChangeCategory("health")}>Health</button>
+          <button onClick={(e)=>ChangeCategory("entertainment")}>Entertainment</button>
           {ArticlesByCategory.map(article => <Articleinfo article={article} key={article.id}/>)} 
           <AddArticleForm/>  
           <ArticleContainer/>  

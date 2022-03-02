@@ -1,6 +1,6 @@
 const initState = 
 {
-   categoryFilter: 'Business',
+   categoryFilter: 'business',
    
    articles: [
    {
