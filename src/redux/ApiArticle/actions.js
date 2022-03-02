@@ -30,7 +30,7 @@ export const searchArticlesByCategory = (newCategory) => {
     return (dispatch) => {
         dispatch (changeCategoryAct(newCategory))
         dispatch (startFetching)
-        axios.get('https://newsapi.org/v2/top-headlines??country=us&category='+newCategory+'&apiKey=d1c7246186ff44abb23e9b124babfa73')
+        axios.get('https://saurav.tech/NewsAPI/top-headlines/category/'+newCategory+'/in.json')
                     .then(response => {
                         const articles = response.data.articles
                         dispatch(successfullyReceivedArticles(articles))
