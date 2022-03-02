@@ -7,9 +7,9 @@ import allReducers from './redux/reducers/index.js'
 import { createLogger } from 'redux-logger'
 import thunk from 'redux-thunk'
 
-const devtools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+//const devtools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 const logger = createLogger({collapsed: true})
-const store = createStore (allReducers, compose(applyMiddleware(thunk,logger),devtools));
+const store = createStore (allReducers, compose(applyMiddleware(thunk,logger)));
 
 store.subscribe (()=>console.log(store.getState()))
 
