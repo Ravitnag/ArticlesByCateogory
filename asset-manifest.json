@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/ArticlesByCateogory/static/js/main.73f8fa09.js",
+    "main.js": "/ArticlesByCateogory/static/js/main.405617dd.js",
     "index.html": "/ArticlesByCateogory/index.html",
-    "main.73f8fa09.js.map": "/ArticlesByCateogory/static/js/main.73f8fa09.js.map"
+    "main.405617dd.js.map": "/ArticlesByCateogory/static/js/main.405617dd.js.map"
   },
   "entrypoints": [
-    "static/js/main.73f8fa09.js"
+    "static/js/main.405617dd.js"
   ]
 }
