@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import Articlelist from './components/Articlelist';
+import Toolbar from './ThemedButton'
+import React,  { useContext, useState} from 'react';
+import ThemeContext from './contexts/theme-context';
+import ThemedButton from './ThemedButton'
+import {Context} from './contexts/context'
+import ArticleContainer from './components/ArticleContainer';
 
 function App() {
+
+const Theme = {
+  isBlueTheme: false,
+        blue: 
+        {
+            color: 'white',
+            backgroundColor: '#83b3ff',
+        },
+        purple:
+        {
+            color: 'white',
+            backgroundColor: '#b976ca'
+        }
+      }
+
+const [theme, setTheme] = useState(Theme);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Context.Provider value={[theme, setTheme]}>
+      <Toolbar/>
+      <Articlelist/>
+    </Context.Provider>
   );
-}
+  }
 
 export default App;
